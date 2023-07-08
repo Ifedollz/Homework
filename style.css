@@ -1,104 +1,205 @@
 :root {
-  --primary-color: #6c63ff;
-  --secondary-color: #f5f2fe;
-  --box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  --branding-color: #6c63ff;
+  --secondary-color: #f9f7fe;
+  --heading-font-family: "Playfair Display", serif;
+  --default-font-family: "Poppins", sans-serif;
 }
+
 body {
-  margin-top: 100px;
+  font-family: var(--default-font-family);
 }
+
 h1,
 h2,
-h3 {
-  margin: 0;
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  text-align: center;
 }
 
 h1 {
-  font-size: 96px;
+  font-size: 90px;
+  line-height: 1.5;
 }
 
 h2 {
+  font-size: 64px;
+}
+
+h4 {
   font-size: 48px;
 }
+p {
+  font-family: var(--default-font-family);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+}
 
-h3 {
+nav {
+  padding: 20px 0;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  list-style: none;
+  line-height: 42px;
+  margin-left: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #272142;
+}
+
+nav a:hover,
+nav li.active a {
+  color: var(--branding-color);
+  transition: all 100ms ease-in-out;
+}
+
+footer {
+  margin: 60px 0;
+}
+
+.logo {
+  max-height: 40px;
+}
+
+.content-container {
+  padding: 60px 20px;
+}
+
+.content-container h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+
+.content-container h2 {
+  font-size: 16px;
+  font-family: var(--default-font-family);
+}
+
+.content {
+  margin: 30px;
+}
+
+.content p {
+  font-size: 14px;
+}
+
+.content h3 {
   font-size: 24px;
-  opacity: 0.7;
+  font-family: var(--default-font-family);
+  line-height: 1.5;
 }
 
-img {
-  max-width: 500px;
-  height: 336px auto;
-}
-.navigation-links {
-  display: flex;
-  margin-top: 40px;
-  justify-content: center;
-}
-
-.navigation-links a {
-  margin: 20px;
-}
-
-.primary-link {
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
-  color: white;
-  border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
-}
-
-.secondary-link {
-  color: var(--primary-color);
-  border: 1px solid var(--primary-color);
-  border-radius: 4px;
-  padding: 20px 15px;
-  text-decoration: none;
-  text-transform: capitalize;
-}
-
-.homepage-link {
-  color: var(--primary-color);
+.hero {
+  background-color: var(--secondary-color);
   text-align: center;
-  display: block;
+  padding: 80px 20px;
+}
+.hero p {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+  color: #272142;
 }
 
-.about-paragraphs {
-  display: flex;
-  margin: 30px 0;
+.hero h2 {
+  font-family: var(--default-font-family);
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 2;
 }
 
-.about-paragraphs p {
-  margin: 10px;
-}
-
-.email-link {
-  display: flex;
-  justify-content: center;
-  color: var(--primary-color);
-  font-size: 28px;
-  text-decoration: none;
-}
-
-.email-link:hover {
-  text-decoration: underline;
-}
-.launch-app-link {
-  text-decoration: none;
-  background: var(--primary-color);
-  box-shadow: var(--box-shadow);
+.btn-branding {
+  background: var(--branding-color);
   color: white;
-  margin: 20px;
   border-radius: 4px;
-  padding: 20px 15px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 12px 20px;
+}
+.btn-branding-outline {
+  color: var(--branding-color);
+  border: 1px solid var(--branding-color);
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 12px 20px;
+}
+
+.project-description {
+  padding: 120px 30px;
+}
+footer {
+  margin: 0 40px;
+}
+
+footer .contact-box {
+  background-color: var(--secondary-color);
+  padding: 30px 120px;
+  border-radius: 10px;
+}
+
+footer .contact-box p {
+  margin: 0;
+}
+footer .email-link {
   text-decoration: none;
-  text-transform: capitalize;
+  color: black;
+  font-size: 24px;
+  text-align: center;
 }
-.about-paragraphs {
-  display: flex;
-  justify-content: center;
+
+footer .email-link:hover {
+  color: var(--branding-color);
 }
-.img-about {
-  max-width: 500px;
+
+footer .social-links a {
+  margin: 0 20px;
+  color: var(--branding-color);
+  background-color: var(--secondary-color);
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 100ms ease-in-out;
+}
+
+footer .social-links a:hover {
+  color: white;
+  background-color: var(--branding-color);
+}
+
+@media (max-width: 960px) {
+  h1 {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  h2 {
+    font-size: 44px;
+  }
+
+  .content-container {
+    text-align: center;
+    padding: 0;
+  }
+
+  .project-description {
+    padding: 0;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
 }
