@@ -205,5 +205,7 @@ footer .social-links a:hover {
 
   nav a {
     font-size: 12px;
+    background-color: #0a0a0a08;
+    color: #ffffff;
   }
 }
